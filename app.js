@@ -4,7 +4,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'dev') {
 const express = require('express');
 const app = express();
 
-app.use(require('morgan')(process.env.NODE_ENV));
+app.use(require('morgan')(process.env.NODE_ENV || 'dev'));
 app.use(require('cors')());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

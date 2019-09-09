@@ -4,7 +4,7 @@
   "description": "person info random",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev nodemon bin/http.js",
+    "dev": "nodemon bin/http.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
