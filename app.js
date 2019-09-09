@@ -3,13 +3,6 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'dev') {
 }
 const express = require('express');
 const app = express();
-// const mongoose = require('mongoose');
-const PORT = process.env.PORT || 3000;
-
-// mongoose.connect(process.env.ATLAS_CLUSTER, {
-//   useNewUrlParser: true,
-//   useCreateIndex: true,
-// });
 
 app.use(require('morgan')(process.env.NODE_ENV));
 app.use(require('cors')());

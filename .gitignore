@@ -1,3 +1,6 @@
 node_modules
 .env
 .directory
+.env
+person_master
+node_modules

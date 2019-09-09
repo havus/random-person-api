@@ -3,21 +3,22 @@ const faker = require('faker');
 const countryCodeDict = require(`${__dirname}/../helpers/dictionary_country`);
 
 class Person {
-  constructor() {
-    this._avatar = faker.internet.avatar();
-    this._firstname = faker.name.firstName();
-    this._lastname = faker.name.lastName();
-    this._job = faker.name.jobTitle();
-    this._email = faker.internet.email();
-    this._phone = faker.phone.phoneNumberFormat();
-    this._address = faker.address.streetAddress();
+  static buildPerson(countrycode) {
+    faker.locale = countrycode;
+    const avatar = faker.internet.avatar();
+    const firstname = faker.name.firstName();
+    const lastname = faker.name.lastName();
+    const job = faker.name.jobTitle();
+    const email = faker.internet.email();
+    const phone = faker.phone.phoneNumberFormat();
+    const address = faker.address.streetAddress();
+    return { avatar, firstname, lastname, job, email, phone, address };
   }
 
   static generateNewFile(countrycode) {
     const arrData = [];
     for (let i = 0; i < 50; i++) {
-      const temp = new Person();
-      arrData.push(temp);
+      arrData.push(this.buildPerson(countrycode));
     }
     fs.writeFileSync(`${__dirname}/../person_master/${countrycode}.json`, JSON.stringify(arrData, null, 2));
   }
