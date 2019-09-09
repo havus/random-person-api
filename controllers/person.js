@@ -31,7 +31,7 @@ class Person {
   static getPerson(req, res, next) {
     try {
       if (fs.existsSync(`${__dirname}/../person_master/${req.params.id}.json`)) {
-        res.status(200).json([Person.readFile(req.params.id)]);
+        res.status(200).json(Person.readFile(req.params.id));
       } else {
         if (countryCodeDict(req.params.id)) {
           Person.generateNewFile(req.params.id);
