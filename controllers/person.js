@@ -36,7 +36,7 @@ class Person {
         if (countryCodeDict(req.params.id)) {
           Person.generateNewFile(req.params.id);
 
-          res.status(200).json([Person.readFile(req.params.id)]);
+          res.status(200).json(Person.readFile(req.params.id));
         } else {
           next({ code: 400, message: 'country code unvalid!' })
         };
