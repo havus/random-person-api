@@ -18,7 +18,12 @@ class Person {
   static generateNewFile(countrycode) {
     const arrData = [];
     for (let i = 0; i < 50; i++) {
-      arrData.push(this.buildPerson(countrycode));
+      const temp = this.buildPerson(countrycode);
+      const obj = {
+        id: i + 1,
+        ...temp,
+      };
+      arrData.push(obj);
     }
     fs.writeFileSync(`${__dirname}/../person_master/${countrycode}.json`, JSON.stringify(arrData, null, 2));
   }
