@@ -6,6 +6,7 @@
 * [Features](#features)
 * [Clone](#clone)
 * [Installation](#installation)
+* [Pre Usage](#pre-usage)
 * [Usage](#usage)
 * [Another Error](#another-error)
 * [License](#license)
@@ -19,11 +20,7 @@
 * [faker](https://www.npmjs.com/package/faker)
 
 ## Features
-* Sign Up
-* Sign In
-* Knowing Request With Morgan for Development
-* Authentication Middleware
-* Error Handler Middleware
+* Fetch fake data
 
 ## Clone
 * Clone this repo
@@ -37,6 +34,13 @@ Enter to the folder and install all `Dependencies`
 $ npm install
 # OR
 $ yarn
+``` 
+<br>
+
+## Pre Usage
+Make a folder with name 'person_master' (without quote)
+```bash
+$ mkdir person_master
 ``` 
 <br>
 
