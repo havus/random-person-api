@@ -1,3 +1,11 @@
+global.base_dir = __dirname;
+global.abs_path = function(path) {
+  return base_dir + path;
+}
+global.include = function(file) {
+  return require(abs_path('/' + file));
+}
+
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'dev') {
   require('dotenv').config();
 }

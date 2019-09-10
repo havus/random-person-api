@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const person = require('../controllers/person');
+const person = include('controllers/person');
 
-router.get('/:id', person.getPerson);
+router.get('/:id', person.getAllPerson);
 
 module.exports = router;
