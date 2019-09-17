@@ -9,10 +9,15 @@ global.include = function(file) {
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'dev') {
   require('dotenv').config();
 }
+
 const express = require('express');
 const app = express();
+app.enable('verbose errors');
 
-app.use(require('morgan')(process.env.NODE_ENV || 'dev'));
+// disable them in production
+if (app.settings.env === 'production') app.disable('verbose errors')
+
+process.env.NODE_ENV === 'test' || app.use(require('morgan')('dev'));
 app.use(require('cors')());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
