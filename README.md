@@ -76,30 +76,68 @@ $ yarn dev
       "id": String(required),
     }
     ```
-  > Select one from this 
-  ```javascript
-  ['az','cz','de','de_AT','de_CH','en','en_AU','en_BORK','en_CA','en_GB','en_IE','en_IND','en_US','en_ZA','en_au_ocker','es','es_MX','fa','fr','fr_CA','ge','id_ID','it','ja','ko','nb_NO','nep','nl','pl','pt_BR','pt_PT','ru','sk','sv','tr','uk','vi','zh_CN','zh_TW']
-  ```
+    > Select one from this 
+    ```javascript
+    ['az','cz','de','de_AT','de_CH','en','en_AU','en_BORK','en_CA','en_GB','en_IE','en_IND','en_US','en_ZA','en_au_ocker','es','es_MX','fa','fr','fr_CA','ge','id_ID','it','ja','ko','nb_NO','nep','nl','pl','pt_BR','pt_PT','ru','sk','sv','tr','uk','vi','zh_CN','zh_TW']
+    ```
 
+  * query:
+    ```javascript
+    {
+      "page": Number(optional),
+    }
+    ```
+    > For limitation per page contain 10 data
+  
   #### _Response Body_ :
   - 200
     ```json
     [
       {
-        "_avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ehsandiary/128.jpg",
-        "_firstname": "D'angelo",
-        "_lastname": "Batz",
-        "_job": "Regional Infrastructure Officer",
-        "_email": "Ernestine51@gmail.com",
-        "_phone": "410-238-5024",
-        "_address": "6573 Halie Oval"
+        "id": "i9259357D",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/collegeman/128.jpg",
+        "firstname": "Amelia",
+        "lastname": "Lestari",
+        "username": "winda.andriani40",
+        "birth": "1984, 5, 12",
+        "height": 156,
+        "weight": 119,
+        "age": 35,
+        "title": "Future Intranet Engineer",
+        "job": "Regional Program Assistant",
+        "jobDesc": "Internal",
+        "jobType": "Supervisor",
+        "email": "Iriana_Puspasari43@yahoo.co.id",
+        "phone": "025 2808 640",
+        "address": "39418 Habibi Overpass"
       },
     ]
     ```
-  - 500
+  - 400
     ```json
     {
-      "code": 500,
-      "message": "Internal server error!"
+      "code": 400,
+      "message": "country code invalid!"
     }
     ```
+<br>
+
+## Another Error
+  + This is our mistake, please report this error as issue :)
+  ```json
+  {
+    "code": 500,
+    "message": "Internal server error :("
+  }
+  ```
+
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2019 © <a href="havus.id" target="_blank">HAVUS</a>.
+
+<br><br><br>
+### Happy Hacking!
