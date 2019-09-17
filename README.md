@@ -1,6 +1,6 @@
 # **Random Person API**
   
-> _This repo made with love_  :heart: _in Jakarta_ ¯\_(ツ)_/¯
+> _This repo made with love_  :heart: _in Jakarta_ `¯\_(ツ)_/¯`
 
 # _Section Header_
 * [Dependencies](#dependencies)
