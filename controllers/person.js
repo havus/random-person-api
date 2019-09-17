@@ -32,7 +32,6 @@ class Person {
     const arrData = [];
     for (let i = 0; i < 300; i++) {
       const temp = Person.buildPerson(countrycode);
-      
       arrData.push(temp);
     }
     fs.writeFileSync(`${__dirname}/../person_master/${countrycode}.json`, JSON.stringify(arrData, null, 2));
@@ -54,7 +53,7 @@ class Person {
       }
     } catch(err) {
       return false;
-    };
+    }
   }
 
   static getAllPerson(req, res, next) {
@@ -70,7 +69,7 @@ class Person {
         res.status(200).json(data);
       }
     } else {
-      next({ code: 400, message: 'country code unvalid!' });
+      next({ code: 400, message: 'country code invalid!' });
     }
   }
 }

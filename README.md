@@ -1,5 +1,6 @@
 # **Random Person API**
-> _This repo made with love_  :heart: _in Jakarta_
+  
+> _This repo made with love_  :heart: _in Jakarta_ ¯\_(ツ)_/¯
 
 # _Section Header_
 * [Dependencies](#dependencies)
@@ -45,14 +46,18 @@ $ mkdir person_master
 <br>
 
 ## Usage
+### Online Access :<br>
+> `http://34.87.64.217/`
+
+### Base Url default :<br>
+> `http://localhost:3000/`
+
 ### Running server
 ```bash
 $ npm run dev
 # OR
 $ yarn dev
 ```
-#### Base Url default :<br>
-> `http://localhost:3000`
 
 <br>
 
