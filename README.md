@@ -67,7 +67,7 @@ $ yarn dev
 ### Person
 + ### **Get All Person**
   > **Method** : `GET`<br>
-  > **Endpoint** : `/`
+  > **Endpoint** : `/:country_code`
 
   #### _Request_ :
   * params:
